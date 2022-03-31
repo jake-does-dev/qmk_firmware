@@ -97,23 +97,46 @@ oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
 }
 
 enum Layers{
-    L_BASE, L_LOWER, L_RAISE, L_ADJUST
+    BASE = 0,
+    GAME = 1,
+    MACOS = 2,
+    MEDIA = 3,
+    NAV = 4,
+    MOUSE = 5,
+    SYM = 6,
+    NUM = 7,
+    FUN = 8
 };
 
 void oled_render_layer_state_r2g(void) {
     oled_write_P(PSTR("Layer: "), false);
     switch (get_highest_layer(layer_state)) {
-        case L_BASE:
-            oled_write_ln_P(PSTR("Default"), false);
+        case BASE:
+            oled_write_ln_P(PSTR("Base"), false);
             break;
-        case L_LOWER:
-            oled_write_ln_P(PSTR("Lower"), false);
+        case GAME:
+            oled_write_ln_P(PSTR("Game"), false);
             break;
-        case L_RAISE:
-            oled_write_ln_P(PSTR("Raise"), false);
+        case MACOS:
+            oled_write_ln_P(PSTR("macOS"), false);
             break;
-        case L_ADJUST:
-            oled_write_ln_P(PSTR("Adjust"), false);
+        case MEDIA:
+            oled_write_ln_P(PSTR("Media"), false);
+            break;
+        case NAV:
+            oled_write_ln_P(PSTR("Nav"), false);
+            break;
+        case MOUSE:
+            oled_write_ln_P(PSTR("Mouse"), false);
+            break;
+        case SYM:
+            oled_write_ln_P(PSTR("Symbol"), false);
+            break;
+        case NUM:
+            oled_write_ln_P(PSTR("Number"), false);
+            break;
+        case FUN:
+            oled_write_ln_P(PSTR("Fn"), false);
             break;
     }
 }
