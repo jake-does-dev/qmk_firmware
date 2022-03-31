@@ -12,7 +12,16 @@
 #define U_NA KC_NO // present but not available for use
 #define U_NU KC_NO // available but not used
 
-enum layers { BASE, BUTTON, MEDIA, NAV, MOUSE, SYM, NUM, FUN };
+enum layers{
+    BASE = 0,
+    GAME = 1,
+    MEDIA = 2,
+    NAV = 3,
+    MOUSE = 4,
+    SYM = 5,
+    NUM = 6,
+    FUN = 7
+};
 
 #if defined MIRYOKU_CLIPBOARD_FUN
 #define U_RDO KC_AGIN
