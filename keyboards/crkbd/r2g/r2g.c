@@ -99,13 +99,12 @@ oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
 enum Layers{
     BASE = 0,
     GAME = 1,
-    MACOS = 2,
-    MEDIA = 3,
-    NAV = 4,
-    MOUSE = 5,
-    SYM = 6,
-    NUM = 7,
-    FUN = 8
+    MEDIA = 2,
+    NAV = 3,
+    MOUSE = 4,
+    SYM = 5,
+    NUM = 6,
+    FUN = 7
 };
 
 void oled_render_layer_state_r2g(void) {
@@ -116,9 +115,6 @@ void oled_render_layer_state_r2g(void) {
             break;
         case GAME:
             oled_write_ln_P(PSTR("Game"), false);
-            break;
-        case MACOS:
-            oled_write_ln_P(PSTR("macOS"), false);
             break;
         case MEDIA:
             oled_write_ln_P(PSTR("Media"), false);

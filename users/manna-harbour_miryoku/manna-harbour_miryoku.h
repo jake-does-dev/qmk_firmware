@@ -15,13 +15,12 @@
 enum layers{
     BASE = 0,
     GAME = 1,
-    MACOS = 2,
-    MEDIA = 3,
-    NAV = 4,
-    MOUSE = 5,
-    SYM = 6,
-    NUM = 7,
-    FUN = 8
+    MEDIA = 2,
+    NAV = 3,
+    MOUSE = 4,
+    SYM = 5,
+    NUM = 6,
+    FUN = 7
 };
 
 #if defined MIRYOKU_CLIPBOARD_FUN
